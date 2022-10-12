@@ -1,0 +1,4 @@
+F1 Dashboard
+
+- Season overview
+    - points progression

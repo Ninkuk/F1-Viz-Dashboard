@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+
+body {
+  font-family: "Anonymous Pro", monospace;
+}
+
+#navBtn {
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  transition: 0.1s;
+}
+
+#navBtn:hover {
+  border-bottom-color: #dc3545;
+}

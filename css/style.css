@@ -14,3 +14,13 @@ body {
 #navBtn:hover {
   border-bottom-color: #dc3545;
 }
+
+div.tultip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  background-color: white;
+  border-radius: 5px;
+  pointer-events: none;
+  color: #212121;
+}

@@ -40,20 +40,39 @@
 
         <!-- YEAR RANGE SLIDER -->
         <div class="row align-items-center">
-            <div class="col">
+            <div class="col-12 col-md-10">
                 <input id="yearRange" class="form-range text-danger" type="range">
             </div>
-            <div class="col-2">
+            <div class="col-12 col-md-2">
                 <input id="yearRangeText" class="form-control form-control-lg" type="number">
             </div>
         </div>
+
+        <!-- Visualizations -->
+        <div class="mt-5 text-center">
+            <h2 class="fw-bold">Driver's Championship</h2>
+            <!-- <h3>Points Heatmap</h3> -->
+            <svg id="driverPointsHeatmap"></svg>
+            <!-- <div class="card text-center text-dark pt-3 ps-2" id="driverCard">
+                
+            </div> -->
+        </div>
+
     </div>
 
 
 
-    <script src="js/ergast.js"></script>
-    <script src="js/app.js"></script>
+    <!-- d3 viz -->
     <script src="js/viz.js"></script>
+
+    <!-- api calls -->
+    <script src="js/ergast.js"></script>
+
+    <!-- data wrangling -->
+    <script src="js/data.js"></script>
+
+    <!-- interactions -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

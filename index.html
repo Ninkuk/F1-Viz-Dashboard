@@ -26,15 +26,8 @@
         <!-- HEADER -->
         <div class="row">
             <div class="col-auto">
-                <h1 class="fw-bold">Formula 1</h1>
-            </div>
-            <!-- NAVIGATION MENU -->
-            <div class="col-auto">
-                <h1 id="navBtn" class="text-danger fw-bold" type="button" data-bs-toggle="dropdown">Dashboard</h1>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="versus.html">Versus</a></li>
-                    <li><a class="dropdown-item" href="map.html">Around the World</a></li>
-                </ul>
+                <h1 class="fw-bold m-0">Formula 1 Dashboard</h1>
+                <p>by Ninad Kulkarni</p>
             </div>
         </div>
 
@@ -48,19 +41,62 @@
             </div>
         </div>
 
-        <!-- Visualizations -->
+        <!-- HEATMAP -->
         <div class="mt-5 text-center">
-            <h2 class="fw-bold">Driver's Championship</h2>
-            <!-- <h3>Points Heatmap</h3> -->
-            <svg id="driverPointsHeatmap"></svg>
-            <!-- <div class="card text-center text-dark pt-3 ps-2" id="driverCard">
-                
-            </div> -->
+            <h2 class="fw-bold">Points Scored in Each Round</h2>
+            <svg height="15" width="320" class="text-center">
+                <text x="0" y="15" fill="white">0</text>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:transparent;" />
+                        <stop offset="100%" style="stop-color:#f44336" />
+                    </linearGradient>
+                </defs>
+                <rect height="15" width="265" x="20" fill="url(#grad1)" />
+                <text x="290" y="15" fill="white">max</text>
+            </svg>
+            <br>
+            <div id="spinner" class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <br>
+            <svg id="pointsHeatmap"></svg>
+        </div>
+
+
+        <div class="mt-5 text-center">
+            <h2 class="fw-bold">Total Points Scored in a Season</h2>
+            <svg id="pointsBarChart"></svg>
+        </div>
+
+        <div class="mt-5 text-center">
+            <h2 class="fw-bold">Compare Driver's Finishing Status</h2>
+            <p>Status can be "Finished" or a reason for retirement from the race</p>
+
+            <div class="row align-items-center justify-content-center">
+                <div class="col">
+                    <select class="form-select" id="select1"></select>
+                </div>
+                <div class="col-1 text-center">vs</div>
+                <div class="col">
+                    <select class="form-select" id="select2"></select>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center mt-3">
+                <div class="col">
+                    <svg id="pie-1"></svg>
+                </div>
+                <div class="col">
+                    <svg id="pie-2"></svg>
+                </div>
+            </div>
         </div>
 
     </div>
 
-
+    <!-- hardcoded data -->
+    <script src="js/data.js"></script>
 
     <!-- d3 viz -->
     <script src="js/viz.js"></script>
@@ -68,11 +104,9 @@
     <!-- api calls -->
     <script src="js/ergast.js"></script>
 
-    <!-- data wrangling -->
-    <script src="js/data.js"></script>
-
     <!-- interactions -->
-    <script src="js/app.js"></script>
+    <script src="js/versus.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>

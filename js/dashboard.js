@@ -20,14 +20,20 @@ yearRangeText.value = defaultYear;
 // Re-render viz on slider change
 yearRange.addEventListener("change", (event) => {
 	yearRangeText.value = event.target.value;
-	getHeatmapData(yearRange.value);
+	renderDriverPointsHeatmap(yearRange.value);
+	renderStandingsCharts(yearRange.value);
+	updateOptions(yearRange.value);
 });
 
 // Re-render viz on text-input change
 yearRangeText.addEventListener("change", (event) => {
 	yearRange.value = event.target.value;
-	getHeatmapData(yearRange.value);
+	renderDriverPointsHeatmap(yearRange.value);
+	renderStandingsCharts(yearRange.value);
+	updateOptions(yearRange.value);
 });
 
 // render heatmap
-getHeatmapData(yearRange.value);
+renderDriverPointsHeatmap(yearRange.value);
+renderStandingsCharts(yearRange.value);
+updateOptions(yearRange.value);

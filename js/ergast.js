@@ -50,7 +50,7 @@ function getDriverStandings(year) {
 
 function getDriverSeasonStatus(year, driverId) {
 	return fetch(
-		`http://ergast.com/api/f1/${year}/drivers/${driverId}/status.json`
+		`https://ergast.com/api/f1/${year}/drivers/${driverId}/status.json`
 	)
 		.then((response) => response.json())
 		.then((data) => {
